@@ -116,5 +116,8 @@ Now run the vercel in local dev side
 
 ![alt text](image-15.png)
 
-if size issue in pushing the file to git hub :
+##### if size issue in pushing the file to git hub :
+
+```sh
 ratxensolutionspvtltd@ratxens-MacBook-Pro backend % git config --global http.postBuffer 524288000
+```
