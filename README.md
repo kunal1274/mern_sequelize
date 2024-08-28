@@ -164,3 +164,86 @@ git add .
 git commit -m "dev1 - 1"
 git push -u origin dev1
 ```
+
+![alt text](image-19.png)
+
+##### Installing mysql
+
+![alt text](image-20.png)
+
+![alt text](image-21.png)
+
+![alt text](image-22.png)
+
+###### through the homebrew
+
+- to check version
+
+```sh
+mysql --version
+```
+
+- to install mysql
+
+```sh
+brew install mysql
+```
+
+Upgrading from MySQL <8.4 to MySQL >9.0 requires running MySQL 8.4 first:
+
+- brew services stop mysql
+- brew install mysql@8.4
+- brew services start mysql@8.4
+- brew services stop mysql@8.4
+- brew services start mysql
+
+We've installed your MySQL database without a root password. To secure it run:
+mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+mysql -u root
+
+To restart mysql after an upgrade:
+brew services restart mysql
+Or, if you don't want/need a background service you can just run:
+/opt/homebrew/opt/mysql/bin/mysqld_safe --datadir\=/opt/homebrew/var/mysql
+
+- to secure with root user and password
+
+```sh
+mysql_secure_installation
+```
+
+![alt text](image-24.png)
+
+- to connect to mysql now it should be with password
+
+```sh
+mysql -u root -p
+```
+
+- to start mysql services
+
+```sh
+brew services start mysql
+```
+
+- to restart mysql services
+
+```sh
+brew services restart mysql
+```
+
+-
+
+##### installing mysql workbench
+
+![alt text](image-23.png)
+
+### Now configuring the node js backend with sequelize
+
+```sh
+npm install mysql2
+```
